@@ -3,3 +3,7 @@
 New line for commit
 
 --------------------
+### Good Commit
+ * first
+ * second
+ * third
