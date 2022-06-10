@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 300ms;
 }
 
 body{
@@ -27,12 +28,14 @@ li{
 
 .page{
     background: white;
-    max-width: 1000px;
+
+    max-width: 1140px;
     width: 100%;  
     height: 100vh;
     margin: 0 auto;
     z-index: -123123;
     border: 1px solid rgb(76, 76, 76);
+    overflow: hidden;
 }
 
 .container{
@@ -84,7 +87,8 @@ li{
 }
 
 .header__icon{
-    width: 20px;
+    color: black;
+    font-size: 22px;
     margin-right: 10px;
 }
 
@@ -99,8 +103,8 @@ li{
     font-weight: 200;
 }
 
-.github__img{
-    width: 50px;
+.github_icon{
+    font-size: 60px;
     margin-right: 10px;
 }
 
@@ -110,24 +114,29 @@ li{
 /* aside start */
 
 .aside{
+    position: relative;
     background: #222;
     height: 100vh;
-    width: 30%;
+    width: 35%;
     margin-left: -15px !important;
 }
 
-.aside::after{
+.aside::before{
+    position: absolute;
     content: "";
     display: block;
     background: #222;
-    height: 500px;
+    height: 100%;
     width: 100%;
-    transform: translateY(-150%);
+    transform: translateY(-100%);
 }
 
 .aside__block{
-   padding: 20px 40px;
+    display: grid;
+    gap: 50px;
+    padding: 20px 40px;
     color: white;
+    overflow: hidden;
 }
 
 .aside__title{
@@ -143,7 +152,7 @@ li{
 
 .aside__bar{
     margin-top: 10px;
-    width: 200px;
+    width: 100%;
     height: 10px;
     background: white;
 }
@@ -152,7 +161,7 @@ li{
     display: block;
     content: "";
     left: 100px;
-    width: 120px;
+    width: 60%;
     height: 10px;
     background: var(--blue);
 }
@@ -161,7 +170,7 @@ li{
     display: block;
     content: "";
     left: 100px;
-    width: 170px;
+    width: 80%;
     height: 10px;
     background: var(--blue);
 }
@@ -170,20 +179,50 @@ li{
     display: block;
     content: "";
     left: 100px;
-    width: 30px;
+    width: 20%;
     height: 10px;
     background: var(--blue);
 }
 
-.main__info{
-    width: 70%;
-}
+
+/* aside end */
+
+
+
+/* main start */
 
 .main{
     display: flex;
     height: 200px;
 }
 
+.main__info{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 65%;
+    padding-left: 30px;
+}
 
 
-/* aside end */
+.section__experience-title{
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.section__experience-text{
+    font-size: 18px;
+    line-height: 26px;
+
+}
+
+.main__info-bottom{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+/* main end */
