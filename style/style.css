@@ -15,7 +15,6 @@
 
 body{
     background: rgb(14, 14, 14);
-    overflow: hidden;
 }
 
 a{
@@ -28,21 +27,22 @@ li{
 
 .page{
     background: white;
-
-    max-width: 1140px;
+    max-width: 1000px;
     width: 100%;  
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     z-index: -123123;
     border: 1px solid rgb(76, 76, 76);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .container{
     width: 100%;
-    padding: 15px;
+    padding: 0 15px;
     margin: 0 auto;
 }
+
+
 /* root end */
 
 /* header start */
@@ -53,10 +53,16 @@ li{
     background: var(--blue);
     padding: 30px;
     width: 90%;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-left: 8.5%;
     box-shadow: 0 0 0 30px white;
     z-index: 10;
+}
+
+.header__nav:hover{
+    box-shadow: none;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 2px #222;
 }
 
 .title{
@@ -119,6 +125,7 @@ li{
     height: 100vh;
     width: 35%;
     margin-left: -15px !important;
+    margin-top: 30px;
 }
 
 .aside::before{
@@ -193,15 +200,15 @@ li{
 
 .main{
     display: flex;
-    height: 200px;
 }
 
 .main__info{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    row-gap: 50px;
     width: 65%;
     padding-left: 30px;
+    margin-top: 40px;
 }
 
 
@@ -214,15 +221,33 @@ li{
 .section__experience-text{
     font-size: 18px;
     line-height: 26px;
-
 }
 
 .main__info-bottom{
-    display: flex;
-    justify-content: space-between;
-    
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* main end */
+
+
+/* Footer start */
+
+.footer{
+    position: relative;
+ 
+}
+
+.footer__box{
+    position: absolute;
+    width: 100%;
+    padding: 20px 10px; 
+    width: 100%;
+    height: 50px;
+    background: var(--blue);
+    box-shadow: 0 0 2px 1px gray;
 }
 
 
 
-/* main end */
+/* Footer end */
