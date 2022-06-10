@@ -4,6 +4,8 @@
    --blue: #7ec4f5;
    --orange: #FFC073;
    --light-orange: #FF8C00;
+   --mreg: 'MR';
+   --msb: 'msb';
 }
 
 
@@ -11,7 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--mreg);
     transition: 100ms;
 }
 
@@ -208,6 +210,7 @@ li{
 
 .menu__title{
     color: var(--blue);
+    padding-bottom: 10px;
 }
 
 
