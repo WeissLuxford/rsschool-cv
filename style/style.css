@@ -1,7 +1,9 @@
 /* root start */
 
 :root{
-   --blue: rgb(126, 196, 245);
+   --blue: #7ec4f5;
+   --orange: #FFC073;
+   --light-orange: #FF8C00;
 }
 
 
@@ -10,7 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: 300ms;
+    transition: 100ms;
 }
 
 body{
@@ -26,14 +28,13 @@ li{
 }
 
 .page{
-    background: white;
-    max-width: 1000px;
+    z-index: -10;
+    max-width: 1010px;
     width: 100%;  
     height: 100%;
     margin: 0 auto;
-    z-index: -123123;
+    background: white;
     border: 1px solid rgb(76, 76, 76);
-    overflow: visible;
 }
 
 .container{
@@ -50,41 +51,48 @@ li{
 
 .header__nav{
     position: relative;
-    background: var(--blue);
+    z-index: 10;
     padding: 30px;
-    width: 90%;
+    width: 89%;
     margin-top: 70px;
     margin-left: 8.5%;
-    box-shadow: 0 0 0 30px white;
-    z-index: 10;
+    background: var(--blue);
+    box-shadow: 0 0 0 30px white; 
+}
+
+.header__nav::before{
+    content: "";
+    display: block;
+    width: 40%;
+    height: 100%;
+    background: rebeccapurple;
 }
 
 .header__nav:hover{
-    box-shadow: none;
-    transform: scale(1.1);
     box-shadow: 0 0 5px 2px #222;
+    transform: scale(1.1);
 }
 
 .title{
+    margin-bottom: 5px;
     font-size: 40px;
     line-height: 40px;
-    margin-bottom: 5px;
     font-weight: 200;
 }
 
 .text{
+    margin-bottom: 20px;
     font-size: 25px;
     line-height: 40px;
-    margin-bottom: 20px;
     font-weight: 200;
 }
 
 .menu__link{
     display: inline-block;
-    color: black;
-    line-height: 20px;
-    font-size: 16px;
     margin: 2px 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
     transition: 300ms;
 }
 
@@ -93,15 +101,15 @@ li{
 }
 
 .header__icon{
-    color: black;
-    font-size: 22px;
     margin-right: 10px;
+    font-size: 22px;
+    color: black;
 }
 
 .github{
-    margin-top: 20px;
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .github a{
@@ -110,8 +118,8 @@ li{
 }
 
 .github_icon{
-    font-size: 60px;
     margin-right: 10px;
+    font-size: 60px;
 }
 
 /* header end */
@@ -121,20 +129,22 @@ li{
 
 .aside{
     position: relative;
-    background: #222;
     height: 100vh;
-    width: 35%;
+    width: 36%;
     margin-left: -15px !important;
     margin-top: 30px;
+    background: #222;
 }
 
 .aside::before{
-    position: absolute;
     content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
     display: block;
-    background: #222;
     height: 100%;
     width: 100%;
+    background: #222;
     transform: translateY(-100%);
 }
 
@@ -158,9 +168,9 @@ li{
 }
 
 .aside__bar{
-    margin-top: 10px;
     width: 100%;
     height: 10px;
+    margin-top: 10px;
     background: white;
 }
 
@@ -191,6 +201,10 @@ li{
     background: var(--blue);
 }
 
+.menu__title{
+    color: var(--blue);
+}
+
 
 /* aside end */
 
@@ -209,21 +223,29 @@ li{
     width: 65%;
     padding-left: 30px;
     margin-top: 40px;
+    color: #222;
 }
 
 
-.section__experience-title{
+.section__title{
+    margin-bottom: 20px;
     font-size: 30px;
     font-weight: 100;
-    margin-bottom: 20px;
+    color: var(--light-orange);
 }
 
-.section__experience-text{
+.section__text{
     font-size: 18px;
     line-height: 26px;
 }
 
-.main__info-bottom{
+.line{
+    width: calc(100% - 60px);
+    padding-bottom: 35px;
+    border-bottom: 2px solid #222;
+}
+
+.main__info-two-column{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -235,17 +257,50 @@ li{
 
 .footer{
     position: relative;
- 
 }
 
 .footer__box{
     position: absolute;
-    width: 100%;
+    left: 0;
+    bottom: 0;
     padding: 20px 10px; 
     width: 100%;
-    height: 50px;
+    height: 70px;
     background: var(--blue);
     box-shadow: 0 0 2px 1px gray;
+}
+
+.footer__box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 35%;
+    height: 70px;
+    background: var(--orange);
+}
+
+.footer__link{
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    font-size: 20px;
+    color: black;
+}
+
+.footer__link:hover{
+    border-bottom: 2px solid black;
+}
+
+.footer__logo{
+    position: absolute;
+    width: 140px;
+    top: -57px;
+    right: 20px;
 }
 
 
