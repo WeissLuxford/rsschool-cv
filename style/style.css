@@ -478,9 +478,6 @@ header{
 }
 
 @media (max-width: 400px){
-    .header__nav{
-
-    }
     .title{
         font-size: 25px;
         line-height: 50px;
