@@ -485,7 +485,8 @@ header{
     
     .title{
         font-size: 25px;
-        line-height: 50px;
+        line-height: 25px;
+        margin-bottom: 20px;
     }
     .text{
         font-size: 20px;
