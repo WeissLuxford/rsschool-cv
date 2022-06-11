@@ -454,8 +454,12 @@ header{
         width: 100%;
     }
 
-    .aside__bar{
-        width: 60%;
+    .line{
+        width: 100%;
+    }
+
+    .section__education{
+        width: 100%;
     }
 }
 
@@ -478,6 +482,7 @@ header{
 }
 
 @media (max-width: 400px){
+    
     .title{
         font-size: 25px;
         line-height: 50px;
