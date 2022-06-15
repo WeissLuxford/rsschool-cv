@@ -21,13 +21,13 @@ I like programming. It is fascinating and interesting. I have a main job (conten
 
 ----------------------
 ## Code 
-
+```
 function factorial(n) {\
     if(n < 0) return null;\
     if (n <= 1) return 1;\
     return n * factorial(n-1);\
   }
-
+```
 ----------------------
 ## Education
 Ordinary High School
